@@ -1,24 +1,14 @@
 <?php
-class Movie{
-    public $nome;
-    public $anno;
-    public $prezzoBiglietto;
-    public $prezzoScontato;
-    function __construct($_nome, $_anno, $_prezzoBiglietto, $_prezzoScontato){
-        $this->nome = $_nome;
-        $this->anno = $_anno;
-        $this->prezzoBiglietto = $_prezzoBiglietto;
-        $this->prezzoScontato = $_prezzoScontato;
-        
-    }
-    public function setprezzoScontato($prezzoBiglietto,$prezzoScontato){
-        if($prezzoBiglietto > 20){
-            $this->prezzoScontato = 12;
-        }else{
-            $this->prezzoScontato = $prezzoBiglietto;
-        }
-    }
-}
+include_once __DIR__ . "/classi/movie.php";
+
+
+
+
 $film1 = new Movie("avatar2", "2022", 30, $prezzoScontato);
-var_dump($film1)
+var_dump($film1);
+$film2 = new Movie("titanic 4", "2050", 89, $prezzoScontato);
+var_dump($film1);
+$film3 = new Movie("avatar 3", "2024", 3, $prezzoScontato);
+var_dump($film1);
+
 ?>
