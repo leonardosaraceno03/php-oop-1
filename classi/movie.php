@@ -1,23 +1,28 @@
 <?php
-class Movie{
+class Movie
+{
     public $nome;
     public $anno;
     public $prezzoBiglietto;
-    public $prezzoScontato;
-    function __construct($_nome, $_anno, $_prezzoBiglietto, $_prezzoScontato){
+    //public $prezzoScontato;
+    function __construct($_nome, $_anno, $_prezzoBiglietto)
+    {
         $this->nome = $_nome;
         $this->anno = $_anno;
         $this->prezzoBiglietto = $_prezzoBiglietto;
-        $this->prezzoScontato = $_prezzoScontato;
-        
+        //$this->prezzoScontato = $_prezzoScontato;
+
     }
-    public function setprezzoScontato($prezzoBiglietto,$prezzoScontato){
-        if($this->prezzoBiglietto > 20){
-            $this->prezzoScontato = 12;
-        }else{
-            $this->prezzoScontato = $this->prezzoBiglietto;
-        }
+
+    public function stampa()
+    {
+        echo $this->nome;
     }
+ public function setprezzoScontato($prezzoScontato){
+    if($this->prezzoBiglietto > 20){
+        $this->prezzoBiglietto = $prezzoScontato;
+    }
+ }
 }
 
 ?>
